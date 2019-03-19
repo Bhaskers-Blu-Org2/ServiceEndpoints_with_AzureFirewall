@@ -104,6 +104,6 @@ In addition to the verification of access using Azure Storage Explorer, we also 
 ![alt text](https://github.com/Microsoft/ServiceEndpoints_with_AzureFirewall/blob/master/images/Summary_8.PNG)
 
 
-Step by Step configuration of this lab can be found here: https://github.com/Microsoft/ServiceEndpoints_with_AzureFirewall
+Step by Step configuration of this lab can be found here: https://github.com/Microsoft/ServiceEndpoints_with_AzureFirewall/blob/master/Lab%20Step-by-Step.docx?raw=true
 
 This lab can be deployed via a template here: TBD
