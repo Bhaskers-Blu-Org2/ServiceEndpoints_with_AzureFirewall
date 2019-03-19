@@ -6,9 +6,9 @@ over a private connection.
 There are several important use cases where Azure Storage would benefit from offering a private
 endpoint to devices and clients:
 
-•	Private traffic though ExpressRoute (e.g., factory devices with secure private IPs that use MPLS for Cloud connectivity)
-•	Private traffic through a VPN (e.g., remote sensors that use P2S for high security)
-•	Devices requiring internal DNS resolution of a PaaS endpoint
+- Private traffic though ExpressRoute (e.g., factory devices with secure private IPs that use MPLS for Cloud connectivity)
+- Private traffic through a VPN (e.g., remote sensors that use P2S for high security)
+- Devices requiring internal DNS resolution of a PaaS endpoint
 
 # The Solution – Azure Firewall as a Private Azure Storage Gateway
 
@@ -16,9 +16,9 @@ Azure Firewall is a managed, cloud-based network security service which provides
 
 Its applicability to solving this private gateway challenge is as follows:
 
-•	Azure Firewall is used as an HA scale-out tier that provides a private IP endpoint for Azure Storage clients and devices.
-•	Azure Firewall can provide a single endpoint for multiple storage accounts while providing granular control with full auditing capabilities
-•	Azure Firewall can leverage service endpoints to prevent storage accessibility from any other network while allowing accessibility to on-prem resources. 
+- Azure Firewall is used as an HA scale-out tier that provides a private IP endpoint for Azure Storage clients and devices.
+- Azure Firewall can provide a single endpoint for multiple storage accounts while providing granular control with full auditing capabilities
+- Azure Firewall can leverage service endpoints to prevent storage accessibility from any other network while allowing accessibility to on-prem resources. 
 
 # The Essential Architecture
 
@@ -40,23 +40,23 @@ Azure Firewall hosted in Microsoft Azure.
 # Lab Components
 
 Resource group for HUB VNet and a minimum of two subnets:
-•	GatewaySubnet (contains Azure ExpressRoute Gateway, /27 min, /26 recommended)
-•	AzureFirewallSubnet (contains Azure Firewall and will scale based on subnet size, minimum /26)
-·	Service Endpoints enabled for Microsoft Storage
-•	VNET Peering to Department 1 VNET
+- GatewaySubnet (contains Azure ExpressRoute Gateway, /27 min, /26 recommended)
+- AzureFirewallSubnet (contains Azure Firewall and will scale based on subnet size, minimum /26)
+- Service Endpoints enabled for Microsoft Storage
+- VNET Peering to Department 1 VNET
 
 Resource group for Department 1 VNet and a minimum of one subnet:
-•	Server Subnet
-•	Test VM (used for testing access to Dept 1 storage account)
-•	VNET Peering to HUB VNET
+- Server Subnet
+- Test VM (used for testing access to Dept 1 storage account)
+- VNET Peering to HUB VNET
 
 On-prem connectivity and test host:
-•	ExpressRoute private peering or IPSEC VPN 
-•	Test host (used for testing access to On-Prem storage account)
+- ExpressRoute private peering or IPSEC VPN 
+- Test host (used for testing access to On-Prem storage account)
 
 Storage accounts with access limited to AzureFirewallSubnet:
-•	On-Prem Blob Storage account with a single container
-•	Department 1 Blob Storage account with a single container
+- On-Prem Blob Storage account with a single container
+- Department 1 Blob Storage account with a single container
 
 # DNS Manipulation
 
