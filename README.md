@@ -53,6 +53,7 @@ Azure Firewall hosted in Microsoft Azure.
 **On-prem connectivity and test host:**
 - ExpressRoute private peering or IPSEC VPN 
 - Test host (used for testing access to On-Prem storage account)
+- On-Prem Firewalls would need to allow HTTPS access to Azure Firewall
 
 **Storage accounts with access limited to AzureFirewallSubnet:**
 - On-Prem Blob Storage account with a single container
