@@ -34,7 +34,7 @@ private PaaS endpoints available over an IPSEC VPN or the ExpressRoute private p
 The following diagram illustrates on-premise to cloud communication architecture secured via the
 Azure Firewall hosted in Microsoft Azure. 
 
-![alt text](https://github.com/Microsoft/ServiceEndpoints_with_AzureFirewall/blob/master/images/Summary_1.PNG)
+![alt text](https://github.com/Microsoft/ServiceEndpoints_with_AzureFirewall/blob/master/images/Summary_9.PNG)
  
 
 # Lab Components
